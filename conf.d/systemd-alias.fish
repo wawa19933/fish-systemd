@@ -20,10 +20,10 @@ set -l sudo_commands \
       edit daemon-reload daemon-reexec
 
 for c in $user_commands
-  eval $alias sc-$c "systemctl $c"
+  eval $alias sc-$c \"systemctl $c\"
 end
 
 for c in $sudo_commands
-  eval $alias sc-$c "sudo systemctl $c"
+  eval $alias sc-$c \"sudo systemctl $c\"
 end
 
