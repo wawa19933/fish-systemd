@@ -1,7 +1,19 @@
-`systemctl` aliases
-===
+# fish-systemctl
 
-Shortcuts for systemd command if you forget `sudo`.
-Adds aliases like: `sc-start`, `sc-stop`, `sc-daemon-reload`, `sc-list-units` etc.
+Shortcuts for `systemctl` which allow to ommit `sudo`.
+This plugin also adds abbreviations:
 
-> NOTE: depends on `balias` command from [oh-my-fish/plugin-balias](https://github.com/oh-my-fish/plugin-balias)
+| Abbr | Command |
+| ---- | ------- |
+| sc | systemctl |
+| scu | systemctl --user |
+| jor | journalctl |
+| jour | journalctl --user |
+
+`systemctl` is a function which will prepend `sudo` when needed.
+
+### Installation
+
+```shell
+$ fisher add wawa19933/fish-systemd
+```
