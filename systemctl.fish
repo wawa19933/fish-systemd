@@ -5,7 +5,7 @@ function systemctl -d 'wraps privileged and user systemctl commands' -w systemct
       is-active is-enabled is-failed \
       status show help get-default show-environment cat 
 
-    if contains -- --user $argv; or contains $argv[1] $user_commands
+    if contains -- --user $argv; or contains -- $argv[1] $user_commands
         command systemctl $argv
     else
         command sudo systemctl $argv
