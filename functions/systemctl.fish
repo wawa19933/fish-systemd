@@ -1,5 +1,4 @@
-# Defined in /tmp/fish.AOswl4/systemctl.fish @ line 2
-function systemctl --description 'wraps privileged and user systemctl commands'
+function systemctl --description 'wraps privileged and user systemctl commands to use sudo when necessary' -w systemctl
     set -l user_commands \
       list-units list-unit-files list-jobs list-timers \
       list-sockets list-dependencies list-machines \
@@ -17,6 +16,6 @@ function systemctl --description 'wraps privileged and user systemctl commands'
     if contains -- --user $argv; or not contains -- $argv[1] $root_commands
         command systemctl $argv
     else
-        sudo systemctl $argv
+        command sudo systemctl $argv
     end
 end

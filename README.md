@@ -7,8 +7,8 @@ This plugin also adds abbreviations:
 | ---- | ------- |
 | sc | systemctl |
 | scu | systemctl --user |
-| jor | journalctl |
-| jour | journalctl --user |
+| jr | journalctl |
+| jru | journalctl --user |
 
 `systemctl` is a function which will prepend `sudo` when needed.
 
